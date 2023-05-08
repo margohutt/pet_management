@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/create_pets.yml
+# This is for testing purpose only
+  - include:
+      file: db/changelog/default_data.yml
+#  - include:
+#      file: db/changelog/create_hibernate_sequence.yml

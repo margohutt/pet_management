@@ -1,0 +1,52 @@
+#This is test data. For testing purpose only
+databaseChangeLog:
+  - changeSet:
+      id: defaultDataSet
+      author: margo
+      changes:
+        - insert:
+            tableName: pets
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: Niki
+              - column:
+                  name: code
+                  value: 33887
+              - column:
+                  name: type
+                  value: Cat
+              - column:
+                  name: furColor
+                  value: Black
+              - column:
+                  name: countryOfOrigin
+                  value: Estonia
+            dbms: h2
+            schemaName: public
+        - insert:
+            tableName: pets
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: Skaidrite
+              - column:
+                  name: code
+                  value: 33889
+              - column:
+                  name: type
+                  value: Dog
+              - column:
+                  name: furColor
+                  value: Red
+              - column:
+                  name: countryOfOrigin
+                  value: Latvia
+            dbms: h2
+            schemaName: public
