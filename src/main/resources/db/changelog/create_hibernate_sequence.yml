@@ -14,4 +14,4 @@ databaseChangelog:
             ordered: true
             schemaName: public
             sequenceName: hibernate_sequence
-            startValue: 1
+            startValue: 4

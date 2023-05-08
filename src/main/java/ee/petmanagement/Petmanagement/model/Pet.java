@@ -9,11 +9,12 @@ import java.io.Serializable;
 @Entity
 public class Pet implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pet_sequence")
+    @SequenceGenerator(name = "pet_sequence", sequenceName = "pet_seq", initialValue = 4, allocationSize = 1)
     @Column(nullable = false, updatable = false)
     private Long id;
     private String name;
-    private int code;
+    private String code;
     private String type;
     private String furColor;
     private String countryOfOrigin;
@@ -22,7 +23,7 @@ public class Pet implements Serializable {
 
     public Pet() {}
 
-    public Pet(String name, int code, String type, String furColor, String countryOfOrigin, String petCode) {
+    public Pet(String name, String code, String type, String furColor, String countryOfOrigin, String petCode) {
         this.name = name;
         this.code = code;
         this.type = type;
@@ -47,11 +48,11 @@ public class Pet implements Serializable {
         this.name = name;
     }
 
-    public int getCode(){
+    public String getCode(){
         return code;
     }
 
-    public void setCode(int code){
+    public void setCode(String code){
         this.code = code;
     }
 
@@ -92,6 +93,7 @@ public class Pet implements Serializable {
                 ", type='" + type + '\'' +
                 ", furColor='" + furColor + '\'' +
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +
+                ", petCode='" + petCode + '\'' +
                 '}';
     }
 }

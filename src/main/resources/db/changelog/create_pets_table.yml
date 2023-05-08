@@ -4,7 +4,7 @@ databaseChangeLog:
       author: margo
       changes:
         - createTable:
-            tableName: pets
+            tableName: pet
             columns:
               - column:
                   name: id
@@ -20,7 +20,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: code
-                  type: int
+                  type: varchar(255)
                   constraints:
                     nullable: false
               - column:
@@ -29,12 +29,17 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: furColor
+                  name: fur_color
                   type: varchar(255)
                   constraints:
                     nullable: false
               - column:
-                  name: countryOfOrigin
+                  name: country_of_origin
                   type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pet_code
+                  type: varchar(36)
                   constraints:
                     nullable: false
