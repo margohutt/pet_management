@@ -12,7 +12,7 @@ import {NgForm} from "@angular/forms";
 export class AppComponent implements OnInit {
   public pets!: Pet[];
   public editPet!: Pet | null;
-  public deletePet: Pet | null | undefined;
+  public deletePet: Pet | undefined | null;
   public addPet!: Pet | null;
   constructor(private petService: PetService) {}
 

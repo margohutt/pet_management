@@ -2,6 +2,9 @@ package ee.petmanagement.Petmanagement;
 
 import ee.petmanagement.Petmanagement.model.Pet;
 import ee.petmanagement.Petmanagement.service.PetService;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,8 +12,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@Transactional
 @RequestMapping (value = "/pet", produces = "application/json")
 public class PetResource {
+    @PersistenceContext
+    protected EntityManager entityManager;
     private final PetService petService;
 
     public PetResource(PetService petService) {
