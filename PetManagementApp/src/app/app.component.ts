@@ -70,8 +70,6 @@ export class AppComponent implements OnInit {
     );
   }
 
-
-
   public onOpenModal(pet: Pet | null, mode: string): void {
     const container = document.getElementById('main-container');
     const button = document.createElement('button');

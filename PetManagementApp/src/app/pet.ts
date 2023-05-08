@@ -1,7 +1,7 @@
 export interface Pet {
   id: number;
   name: string;
-  code: bigint;
+  code: string;
   type: string;
   furColor: string;
   countryOfOrigin: string;

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/pet")
+@RequestMapping (value = "/pet", produces = "application/json")
 public class PetResource {
     private final PetService petService;
 
